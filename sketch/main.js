@@ -1,33 +1,11 @@
-let circles = [];
-
 function setup() {
   createCanvas(600, 800);
-}
-
-function rand_color() {
-  const randomColor = color(
-    parseInt(Math.random() * 255),
-    parseInt(Math.random() * 255),
-    parseInt(Math.random() * 255)
-  );
-  return randomColor;
-}
-
-function mousePressed() {
-  circles.push({
-    x: mouseX,
-    y: mouseY,
-    color: rand_color(),
-    size: parseInt(Math.random() * 40 + 10),
-  });
+  createP("Object oriented programming")
+    .position(50, 10)
+    .style("font-size", "48px");
 }
 
 function draw() {
   background(255);
-  for (let i = 0; i < circles.length; i++) {
-    circle(circles[i].x, circles[i].y, circles[i].size);
-    fill(circles[i].color);
-  }
-  fill(0);
-  noStroke();
+  rect(30, 30, 500, 500);
 }
