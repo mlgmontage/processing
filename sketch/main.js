@@ -6,6 +6,6 @@ function draw() {
   for (let i = 0; i < 20; i++) {
     noStroke();
     fill(randColor());
-    circle(rand(10, 800), rand(10, 800), rand(10, 50));
+    rect(rand(10, 800), rand(10, 800), rand(10, 100), rand(10, 100));
   }
 }
