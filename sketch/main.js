@@ -1,17 +1,19 @@
+// sliders
 let red, green, blue;
 
 function setup() {
-  red = createSlider(0, 255, 0);
-  red.position(10, 10);
-  red.style("width", 500 + "px");
+  createDiv("<h1>Color Picker</h1>").position(10, 10);
+  red = createSlider(0, 255, 0)
+    .position(10, 80)
+    .style("width", 500 + "px");
 
-  green = createSlider(0, 255, 0);
-  green.position(10, 30);
-  green.style("width", 500 + "px");
+  green = createSlider(0, 255, 0)
+    .position(10, 110)
+    .style("width", 500 + "px");
 
-  blue = createSlider(0, 255, 0);
-  blue.position(10, 50);
-  blue.style("width", 500 + "px");
+  blue = createSlider(0, 255, 0)
+    .position(10, 140)
+    .style("width", 500 + "px");
 
   createCanvas(600, 800);
 }
