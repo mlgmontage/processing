@@ -1,13 +1,11 @@
-let position = new Vector(0, 0);
-let speed = new Vector(4, 5);
+let position = new Vector2D(0, 0);
+let speed = new Vector2D(4, 5);
 
 let bounceColor;
 
 function setup() {
   createCanvas(600, 500);
   bounceColor = randColor();
-  position = new Vector(0, 0);
-  speed = new Vector(5, 2);
   y = height / 2;
   frameRate(60);
 }
