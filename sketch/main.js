@@ -1,13 +1,13 @@
-let x = 0;
-let y = 0;
-let speedX = 0;
-let speedY = 0;
-let acceleration = 0.1;
+let position = new Vector(0, 0);
+let speed = new Vector(4, 5);
+
 let bounceColor;
 
 function setup() {
   createCanvas(600, 500);
   bounceColor = randColor();
+  position = new Vector(0, 0);
+  speed = new Vector(5, 2);
   y = height / 2;
   frameRate(60);
 }
@@ -26,20 +26,18 @@ function draw() {
   background(255);
 
   // mover
-  circle(x, y, 50);
+  circle(position.x, position.y, 50);
   fill(bounceColor);
-  if (x >= width || x < 0) {
-    speedX *= -1;
+  if (position.x >= width || position.x < 0) {
+    speed.x *= -1;
     bounceColor = randColor();
   }
-  if (y >= height || y < 0) {
-    speedY *= -1;
+  if (position.y >= height || position.y < 0) {
+    speed.y *= -1;
     bounceColor = randColor();
   }
 
-  x += speedX;
-  y += speedY;
-  speedX += acceleration;
-  speedY += acceleration;
+  position.x += speed.x;
+  position.y += speed.y;
   noStroke();
 }
