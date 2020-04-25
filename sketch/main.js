@@ -14,19 +14,19 @@ function rand_color() {
 }
 
 function mousePressed() {
-  circles.push([
-    mouseX,
-    mouseY,
-    rand_color(),
-    parseInt(Math.random() * 40 + 10),
-  ]);
+  circles.push({
+    x: mouseX,
+    y: mouseY,
+    color: rand_color(),
+    size: parseInt(Math.random() * 40 + 10),
+  });
 }
 
 function draw() {
   background(255);
   for (let i = 0; i < circles.length; i++) {
-    circle(circles[i][0], circles[i][1], circles[i][3]);
-    fill(circles[i][2]);
+    circle(circles[i].x, circles[i].y, circles[i].size);
+    fill(circles[i].color);
   }
   fill(0);
   noStroke();
