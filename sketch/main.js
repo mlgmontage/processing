@@ -1,7 +1,8 @@
 let x = 0;
 let y = 0;
-let speedX = 5;
-let speedY = 8;
+let speedX = 0;
+let speedY = 0;
+let acceleration = 0.1;
 let bounceColor;
 
 function setup() {
@@ -38,4 +39,7 @@ function draw() {
 
   x += speedX;
   y += speedY;
+  speedX += acceleration;
+  speedY += acceleration;
+  noStroke();
 }
