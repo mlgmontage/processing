@@ -3,5 +3,7 @@ function setup() {
 }
 
 function draw() {
-  circle(50, 50, 20);
+  for (let i = 0; i < 20; i++) {
+    circle(rand(10, 800), rand(10, 800), rand(10, 50));
+  }
 }
