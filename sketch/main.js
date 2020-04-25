@@ -1,5 +1,5 @@
 let isMousePressed = false;
-let lines = [];
+let shapes = [];
 let Line = [];
 
 function setup() {
@@ -16,7 +16,7 @@ function mouseReleased() {
   Line.push(mouseX);
   Line.push(mouseY);
   isMousePressed = false;
-  lines.push(Line);
+  shapes.push(Line);
   Line = [];
 }
 
@@ -26,7 +26,7 @@ function draw() {
     line(Line[0], Line[1], mouseX, mouseY);
   }
 
-  for (let i = 0; i < lines.length; i++) {
-    line(lines[i][0], lines[i][1], lines[i][2], lines[i][3]);
+  for (let i = 0; i < shapes.length; i++) {
+    line(shapes[i][0], shapes[i][1], shapes[i][2], shapes[i][3]);
   }
 }
